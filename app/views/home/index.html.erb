@@ -1,0 +1,9 @@
+<h1>이메일 쓰기</h1>
+<form action='/home/email_send' method='POST'>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    보내는 사람:<input type='text' name='from_email'></input><br>
+    받는 사람:<input type='text' name='to_email'></input><br>
+    제목:<input type='text' name='title'></input><br>
+    내용:<textarea type='text' name='content'></textarea><br>
+    <input type='submit' value='전송'></input>
+</form>
